@@ -1,6 +1,11 @@
 name: Test Doc build
+
 on:
-  [push, pull_request]
+   pull_request:
+   push:
+     branches:
+       - main
+   workflow_dispatch:
 
 jobs:
   doc-build:
