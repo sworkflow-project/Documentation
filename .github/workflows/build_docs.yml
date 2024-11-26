@@ -31,7 +31,9 @@ jobs:
           make html
 
       - name: Deploy to temporary link
-        uses: peaceiris/actions-gh-pages@v3.9.3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.SECRET_TOKEN }}
+          external_repository: sworkflow-project/website
           publish_dir: ./output/html
+          allow_empty_commit: true
